@@ -1,3 +1,5 @@
-nota1, nota2, nota3, nota4 = input("Digite as notas separadas por espaço: ").split()
-# pega as notas digitadas pelo usuário, separadas por espaço, e armazena em variáveis
-print(f"A média das notas é {(float((nota1 + nota2 + nota3 + nota4)) / 4):.2f}")
+notas = [float(nota) for nota in input("Digite as notas separadas por espaço: ").split()]
+#notas nesse caso é uma lista onde utilizamos o split para separar os valores e o float para converter para float
+average = sum(notas) / len(notas)
+
+print("A média das notas é:", average)
