@@ -1,7 +1,7 @@
 
 pesoKG = float(input("Digite seu peso em kilogramas: "))
 pesoLibras = pesoKG * 2.20462262
-print(pesoLibras)
+
 
 if 161 <= pesoLibras <= 168:
     print("Sua categoria é Super-médio.")
