@@ -1,3 +1,5 @@
+#define uma range personalizada para o for que pega um inicio, um fim e o tamanho de cada passo como variáveis.
+#age de forma semelhante aos while loops nos exerícios 1 a 3.
 def my_range(start, end, step):
     while start <= end:
         yield start
