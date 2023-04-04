@@ -62,9 +62,13 @@ while end == 0:
     end = int(input("Digite 0 para continuar e 1 para parar:."))
  else:
     print("Modo de jogo inválido")
+    break
 
 if end == 1:
-    print(f"""
-    Placar
-    Jogador 1 {player1score}
-    Jogador 2 {player2score}""")
+    print("\t Jogador 1 \t\t Jogador 2")
+    n = 0
+    for scores1, scores2 in zip(player1score, player2score):
+        n += 1
+        print("Jogo {} \t {} \t\t {}".format(n,scores1, scores2))
+        #formata os resultados em uma tabela, entretando
+    
