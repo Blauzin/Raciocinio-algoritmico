@@ -10,7 +10,7 @@ def jokenpoGame(hand1, hand2):
     if hand1 == hand2:
         print ("Empate!")
         player1score.append("empate")
-        player2score.append("empate")
+        player2score.append(" empate")
     elif hand1 == 1:
         if hand2 == 3:
             print("Jogador 1 ganhou!")
@@ -65,10 +65,10 @@ while end == 0:
     break
 
 if end == 1:
-    print("\t Jogador 1 \t\t Jogador 2")
+    print("\t     Jogador 1 \t\tJogador 2")
     n = 0
     for scores1, scores2 in zip(player1score, player2score):
         n += 1
-        print("Jogo {} \t {} \t\t {}".format(n,scores1, scores2))
+        print("Jogo {}       {}            {}".format(n,scores1, scores2))
         #formata os resultados em uma tabela, entretando
     
