@@ -1,5 +1,5 @@
 #input do usuário
-numb = int(input("Digite um número a ser testado:"))
+numb = int(input("Digite um número a ser testado: "))
 
 #verifica se o número não é 1, então divide
 # o número por vários número encontrados em sua
