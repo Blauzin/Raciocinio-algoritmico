@@ -12,5 +12,6 @@ while result < numero:
 
 if result == numero:
     print("O número é triangular.")
+    print(prime-1,b,c)
 else:
     print("O número não é triangular.")
