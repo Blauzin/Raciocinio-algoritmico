@@ -55,7 +55,7 @@ while end == 0:
     #Player vs Player  
     #hand1 = int(input("Jogador 1, escolha entre 1 - pedra, 2 - papel ou 3 - tesoura: "))
     #hand2 = int(input("Jogador 2, escolha entre 1 - pedra, 2 - papel ou 3 - tesoura: "))
-    hand1 = incant(getpass("Jogador 1, escolha entre 1 - pedra, 2 - papel ou 3 - tesoura: "))
+    hand1 = int(getpass("Jogador 1, escolha entre 1 - pedra, 2 - papel ou 3 - tesoura: "))
     hand2 = int(getpass("Jogador 1, escolha entre 1 - pedra, 2 - papel ou 3 - tesoura: "))
     #getpass para não aparecer o valor no prompt de comando
 
