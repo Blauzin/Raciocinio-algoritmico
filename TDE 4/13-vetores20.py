@@ -1,33 +1,28 @@
-x = 20
+def trocar_valores(lista, pos1, pos2):
+    #Função auxiliar para trocar os valores de duas posições em uma lista.
+    
+    lista[pos1], lista[pos2] = lista[pos2], lista[pos1]
+
+# Leitura dos números
 listNumbs = []
+x = 20
 
-#pede números até 20 e aceita múltiplos ao mesmo tempo
-while len(listNumbs) < 20:
-    listNumbsTemp  =  input(f"Digite {x} valores inteiros: ").split()
-    for i in listNumbsTemp: #pega os valores a adiciona na lista correta
-        listNumbs.append(int(i))
-    x -= len(listNumbs)
-#cleaner se a lista ultrapassar o limite
-if len(listNumbs) > 20:
-    while len(listNumbs) > 20:
-        listNumbs.pop()
-       
+while len(listNumbs) < x:
+    valores = input(f"Digite {x - len(listNumbs)} valores inteiros: ").split()
+    for valor in valores:
+        if len(listNumbs) >= x:
+            break
+        listNumbs.append(int(valor))
 
-def trocador( lista:list , sequentialValue:int, sequentialPos:int, minValue:int, minPos:int):
-    temp = sequentialValue
-    lista.insert(sequentialPos, minValue)
-    lista.insert(minPos, temp)
+# Ordenação por seleção no vetor original
+for i in range(len(listNumbs) - 1):
+    indice_menor = i
+    for j in range(i + 1, len(listNumbs)):
+        if listNumbs[j] < listNumbs[indice_menor]:
+            indice_menor = j
 
+    trocar_valores(listNumbs, i, indice_menor)
 
-def myMin(lista:list):
-    menorNumero = lista[0]
-    menorNumeroPos = lista.index(lista[0])
-    for pos, value in enumerate(lista):
-        if menorNumero > value:
-            menorNumero = value
-            menorNumeropos = pos
-    return menorNumero, menorNumeropos
-
+print("Vetor ordenado:")
 print(listNumbs)
-print(myMin(listNumbs))
 
