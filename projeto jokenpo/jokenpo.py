@@ -7,64 +7,49 @@ modoDeJogo =  int(input("Digite 1 para jogar contra o computador, 2 para jogar c
 player1score = []
 player2score = []
 
+#matriz de vitória
+matrizResult = [[0, 2, 1], [1, 0, 2], [2, 1, 0]]
+
 #função do jogo que calcula o resultado
 def jokenpoGame(hand1, hand2):
-    if hand1 == hand2:
+    resultado = matrizResult[hand1][hand2]
+    if resultado == 0:
         print ("Empate!")
         player1score.append("empate")
         player2score.append(" empate")
-    elif hand1 == 1:
-        if hand2 == 3:
+    elif resultado == 1:
+        
             print("Jogador 1 ganhou!")
             player1score.append("vitória")
             player2score.append("derrota")
-        else:
+    elif resultado == 2:
             print("Jogador 2 venceu!")
             player1score.append("derrota")
             player2score.append("vitória")
-    elif hand1 == 2:
-        if hand2 == 1:
-            print("Jogador 1 ganhou!")
-            player1score.append("vitória")
-            player2score.append("derrota")
-        else:
-            print("Jogador 2 venceu!")
-            player1score.append("derrota")
-            player2score.append("vitória")
-    elif hand1 == 3:
-            if hand2 == 2:
-                 print("Jogador 1 ganhou!")
-                 player1score.append("vitória")
-                 player2score.append("derrota")
-            else:
-                print("Jogador 2 venceu!")
-                player1score.append("derrota")
-                player2score.append("vitória")
-    
 
 end = 0
 
 while end == 0:
  if modoDeJogo == 1:
     #Player vs CPU
-    hand1 = int(input("Escolha entre 1 - pedra, 2 - papel ou 3 - tesoura: "))
-    hand2 = random.randint(1,3)
+    hand1 = int(input("Escolha entre 0 - pedra, 1 - papel ou 2 - tesoura: "))
+    hand2 = random.randint(0,2)
     jokenpoGame(hand1,hand2)
     end = int(input("Digite 0 para continuar e 1 para parar: "))
  elif modoDeJogo == 2:
     #Player vs Player  
     #hand1 = int(input("Jogador 1, escolha entre 1 - pedra, 2 - papel ou 3 - tesoura: "))
     #hand2 = int(input("Jogador 2, escolha entre 1 - pedra, 2 - papel ou 3 - tesoura: "))
-    hand1 = int(getpass("Jogador 1, escolha entre 1 - pedra, 2 - papel ou 3 - tesoura: "))
-    hand2 = int(getpass("Jogador 1, escolha entre 1 - pedra, 2 - papel ou 3 - tesoura: "))
+    hand1 = int(getpass("Jogador 1, escolha entre 0 - pedra, 1 - papel ou 2 - tesoura: "))
+    hand2 = int(getpass("Jogador 2, escolha entre 0 - pedra, 1 - papel ou 2 - tesoura: "))
     #getpass para não aparecer o valor no prompt de comando
 
     jokenpoGame(hand1, hand2)
     end = int(input("Digite 0 para continuar e 1 para parar: "))
  elif modoDeJogo == 3:
     #CPU vs CPU
-    hand1 = random.randint(1,3)
-    hand2 = random.randint(1,3)
+    hand1 = random.randint(0,2)
+    hand2 = random.randint(0,2)
     jokenpoGame(hand1, hand2)
     end = int(input("Digite 0 para continuar e 1 para parar: "))
  else:
