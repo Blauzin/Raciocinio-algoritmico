@@ -14,3 +14,4 @@ dictPayText = {1:f"O pagamento será em 1 parcela de R$ {dictPay[keyOpt]:.2f}.",
 #dictpayText relaciona a chave do usuário de keyopt com o texto que deve ser printado ao final, economizando linhas.
 
 print(dictPayText[keyOpt])
+
