@@ -3,7 +3,7 @@ matriz = []
 for i in range(4):
     linha = []
     for j in range(4):
-            element = int(input(f"Enter the element at position ({i+1}, {j+1}): "))
+            element = int(input(f"Insira o elemento na posição ({i+1}, {j+1}): "))
             linha.append(element)
     matriz.append(linha)
 
