@@ -5,10 +5,10 @@ def printMatriz():
 
 printMatriz()
 numeroMultiplicador = int(input("Digite um número para multiplicar a matriz acima: "))
-
-for linha in range(3):
-      for coluna in range(3):
-            matriz[linha][coluna] =  matriz[linha][coluna] * numeroMultiplicador
+def multiplicarMatriz(matriz, numeroMultiplicador):
+    for linha in range(len(matriz)):
+        for coluna in range(len(matriz[0])):
+                matriz[linha][coluna] =  matriz[linha][coluna] * numeroMultiplicador   
         
-
+multiplicarMatriz(matriz, numeroMultiplicador)
 printMatriz()
