@@ -7,8 +7,16 @@ for i in range(4):
             linha.append(element)
     matriz.append(linha)
 
+
+
 listaMaiores = []
 
-for i in range(4):
-      listaMaiores.append(max(matriz[i]))
+for coluna in range(4):
+    maior = matriz[coluna][coluna]
+    for linha2 in range(4):
+        if matriz[linha2][coluna] > maior:
+            maior = matriz[linha2][coluna]
+    listaMaiores.append(maior)
+
+
 print(listaMaiores)

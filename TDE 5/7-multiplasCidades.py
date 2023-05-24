@@ -32,7 +32,7 @@ while cidade != "pare":
     listaCidades.append(cidade)
 listaCidades.pop()
 
-soma = 0
+soma = 0    
 i = 0
 for i in (range(len(listaCidades) - 1)):
         distancia = matrizDistancias[dictCidades[listaCidades[i + 1] ]] [dictCidades[listaCidades[i]]]
