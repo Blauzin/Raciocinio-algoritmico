@@ -13,12 +13,16 @@ for i in range(4):
 
 
 maiorNumero = matriz[0][0]
+linhaMaior = 0
 for linha in range(4):
     for coluna in range(4):
         if matriz[linha] [coluna] > maiorNumero:
-            maiorNumero = matriz[linha] [coluna] 
             linhaMaior = linha
+            maiorNumero = matriz[linha] [coluna] 
+            
+
 menorNumero = min(matriz[linhaMaior])
+
 
   
 
