@@ -42,15 +42,14 @@ def modoAdmin(flag):
             print("Novo produto adicionado com sucesso!")
         elif opt == 2:
             printMaquina()
-            indice = int(input("Insira o ID do produto que deseja editar: ")) - 1
-            if indice >= 1 and indice <= len(tabelaMaster):
-                produto = tabelaMaster[indice]
+            index = int(input("Insira o ID do produto que deseja editar: ")) - 1
+            if index >= 1 and index <= len(tabelaMaster):
                 nome = input("Insira o novo nome do produto: ")
                 preco = float(input("Insira o novo preço do produto: "))
                 estoque = int(input("Insira o novo estoque do produto: "))
-                produto[0] = nome
-                produto[1] = preco
-                produto[2] = estoque
+                tabelaMaster[index][0] = nome
+                tabelaMaster[index][1] = preco
+                tabelaMaster[index][2] = estoque
                 print("Produto editado com sucesso!")
             else:
                 print("Índice inválido!")
