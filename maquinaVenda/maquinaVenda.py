@@ -27,7 +27,9 @@ def modoAdmin(flag):
         0 - Voltar
         1 - Adicionar item
         2 - Editar item
-        3 - Excluir item""")
+        3 - Excluir item
+        4 - Estoque moedas
+        5 - Estoque geral""")
         opt = int(input("Insira a opção desejada: "))
         if opt == 0:
             escolhasPreços(True)
@@ -60,9 +62,13 @@ def modoAdmin(flag):
             else:
                 print(f"O produto {tabelaMaster[index][0]} foi excluído com sucesso!")
                 tabelaMaster.pop(index)
-                
-
-
+        elif opt == 4:
+            for i in range(len(moedas)):
+                print(*moedas[i],)
+        elif opt == 5:
+            for i in range(len(tabelaMaster)):
+                print(*tabelaMaster[i],)
+    	    
         else:
             print("Opção inválida!")
 
