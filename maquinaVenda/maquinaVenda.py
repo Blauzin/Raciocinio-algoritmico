@@ -43,7 +43,7 @@ def modoAdmin(flag):
         elif opt == 2:
             printMaquina()
             index = int(input("Insira o ID do produto que deseja editar: ")) - 1
-            if index >= 1 and index <= len(tabelaMaster):
+            if index >= 0 and index <= len(tabelaMaster):
                 nome = input("Insira o novo nome do produto: ")
                 preco = float(input("Insira o novo preço do produto: "))
                 estoque = int(input("Insira o novo estoque do produto: "))
